@@ -1,0 +1,6 @@
+# .gitignore
+check_points/
+corpus/
+data-bin/
+distilled_data/
+ori_data/
