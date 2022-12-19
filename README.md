@@ -17,3 +17,6 @@ we borrowed the method of [GLAT](https://arxiv.org/pdf/2008.07905.pdf) to mask t
 and let the decoder predict the tokens of the masked tokens. However, this method does not know which tokens should be masked in the inference stage. 
 In order to solve this problem, a discriminator can be used to perform binary classification on the tokens predicted by the encoder to determine whether 
 the predicted tokens are correct, but no further attempts were made.
+
+
+How to preprocess corpus, train model and inference, please refer to NATbase repository.
