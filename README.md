@@ -1,4 +1,4 @@
-# encoder-GLAT-NAT
+# Encoder-GLAT-NAT
 The idea of this project is that if the input at the decoder side is closer to the ground truth, the predicted target sentence will be more accurate. 
 The source sentence contains all the semantic information, so if the encoder is used to directly predict the target sentence which is used as the input of the decoder, 
 the accuracy of the final sentence predicted by the decoder can be greatly improved.
@@ -19,4 +19,9 @@ In order to solve this problem, a discriminator can be used to perform binary cl
 the predicted tokens are correct, but no further attempts were made.
 
 
+# Problem
+A discriminator should be used to classify the tokens predicted by the encoder, and a mask should be used as the input of the decoder for the tokens that are judged to be incorrectly predicted by the discriminator. However, in the initial stage of training, the discriminator prediction is inaccurate, which leads to mask token errors. Therefore, it is necessary to design an appropriate training strategy which can refer to the training strategy in the article Learning to Rewrite for Non-Autoregressive Neural Machine Translation.
+
+
+# Usage
 How to preprocess corpus, train model and inference, please refer to NATbase repository.
